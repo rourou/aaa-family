@@ -8,6 +8,7 @@ const Familly = (props) => {
         <div className="block text-center">
 
             <img
+                alt="logo"
                 height="150px"
                 className="mt-3 mb-0"
                 src="./img/logo.png"
