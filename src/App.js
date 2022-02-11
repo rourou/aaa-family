@@ -19,7 +19,7 @@ function App() {
         <Routes>
 
           <Route
-            path='/famille'
+            path='/'
             element={<Familly />}
           />
 

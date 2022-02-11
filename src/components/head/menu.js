@@ -9,7 +9,7 @@ const Menu = (props) => {
         {
             label: "La Famille",
             command: () => {
-                navigate('/famille')
+                navigate('/')
             }
         },
         {
