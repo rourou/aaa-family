@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { Card } from "primereact/card";
 
 const Familly = (props) => {
     const navigate = useNavigate()
