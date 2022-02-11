@@ -17,7 +17,7 @@ const Familly = (props) => {
                 Une Famille
             </h1>
 
-            <div className="flex justify-content-center">
+            <div className="sm:block lg:flex justify-content-center">
                 <div
                     onClick={() => navigate('/armee')}
                     className="m-2">
