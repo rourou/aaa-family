@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
 import Footer from './components/footer/footer';
 
 import clanInfos from './infos/infosClans.json'
@@ -11,42 +11,45 @@ import Familly from './components/familly';
 
 function App() {
   console.log('clanInfos:', clanInfos)
+  console.log(window.location.pathname)
+  const navigate = useNavigate();
+  navigate('window.location.pathname')
+
   return (
     <div className="App">
-      <Router>
-        <Head />
 
-        <Routes>
+      <Head />
 
-          <Route
-            path='/'
-            element={<Familly />}
-          />
+      <Routes>
 
-          <Route
-            path='/recrutement'
-            element={<Recrue />}
-          />
+        <Route
+          path='/'
+          element={<Familly />}
+        />
 
-          <Route
-            path='/armee'
-            element={<Clan clan={clanInfos.armee} />}
-          />
+        <Route
+          path='/recrutement'
+          element={<Recrue />}
+        />
 
-          <Route
-            path='/asterix'
-            element={<Clan clan={clanInfos.asterix} />}
-          />
+        <Route
+          path='/armee'
+          element={<Clan clan={clanInfos.armee} />}
+        />
 
-          <Route
-            path='/alpha-corp'
-            element={<Clan clan={clanInfos.alphacorp} />}
-          />
+        <Route
+          path='/asterix'
+          element={<Clan clan={clanInfos.asterix} />}
+        />
 
-        </Routes>
+        <Route
+          path='/alpha-corps'
+          element={<Clan clan={clanInfos.alphacorp} />}
+        />
 
-        <Footer />
-      </Router>
+      </Routes>
+
+      <Footer />
     </div>
   )
 }

@@ -27,7 +27,7 @@ const Menu = (props) => {
         {
             label: "Alpha-Corp",
             command: () => {
-                navigate('/alpha-corp')
+                navigate('/alpha-corps')
             }
         },
         {
