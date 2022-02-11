@@ -62,6 +62,7 @@ const Recrue = (props) => {
                 </Button>
             </Card>
             <img className="m-2"
+                alt="IMG recrutement"
                 height="400px" src="./img/RecrutementAAA.jpg" />
         </div >
     )

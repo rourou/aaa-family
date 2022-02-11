@@ -37,7 +37,10 @@ const Menu = (props) => {
             }
         }
     ]
-    const start = <img height="50px" src="./img/Logo.png" />
+    const start = <img
+        alt="logo"
+        height="50px"
+        src="./img/Logo.png" />
     return (
         <React.Fragment>
             <Menubar

@@ -19,7 +19,9 @@ const Clan = (props) => {
                 />
             </div>
             <div>
-                <img src="./construction.png" />
+                <img
+                    alt="construction"
+                    src="./construction.png" />
             </div>
         </div>
     )
