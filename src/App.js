@@ -6,9 +6,8 @@ import clanInfos from './infos/infosClans.json'
 
 import Head from './components/head'
 import Recrue from './components/recrue';
-import Armee from './components/armee';
-import Asterix from './components/asterix';
-import AlphaCorp from './components/alphaCorp';
+import Clan from './components/clan';
+import Familly from './components/familly';
 
 function App() {
   console.log('clanInfos:', clanInfos)
@@ -20,23 +19,28 @@ function App() {
         <Routes>
 
           <Route
+            path='/famille'
+            element={<Familly />}
+          />
+
+          <Route
             path='/recrutement'
             element={<Recrue />}
           />
 
           <Route
             path='/armee'
-            element={<Armee clan={clanInfos.armee} />}
+            element={<Clan clan={clanInfos.armee} />}
           />
 
           <Route
             path='/asterix'
-            element={<Asterix clan={clanInfos.asterix} />}
+            element={<Clan clan={clanInfos.asterix} />}
           />
 
           <Route
             path='/alpha-corp'
-            element={<AlphaCorp clan={clanInfos.alphacorp} />}
+            element={<Clan clan={clanInfos.alphacorp} />}
           />
 
         </Routes>

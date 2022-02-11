@@ -1,14 +1,17 @@
 {
     "armee": {
         "name": "L'Armée",
-        "tag": "#12"
+        "tag": "#2JQ82LG",
+        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=2JQ82LG"
     },
     "asterix": {
-        "name": "Astérix",
-        "tag": "#123"
+        "name": "Astérix Team",
+        "tag": "#YV902CU",
+        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=YV902CU"
     },
     "alphacorp": {
-        "name": "Alpha Corp",
-        "tag": "#1234"
+        "name": "Alpha Corps",
+        "tag": "#2LYU98Q2",
+        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=2LYU98Q2"
     }
 }

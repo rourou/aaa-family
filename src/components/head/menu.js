@@ -1,17 +1,50 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+import { Menubar } from 'primereact/menubar';
 
 const Menu = (props) => {
-
+    const navigate = useNavigate();
+    const items = [
+        {
+            label: "La Famille",
+            command: () => {
+                navigate('/famille')
+            }
+        },
+        {
+            label: "L'Armée",
+            command: () => {
+                navigate('/armee')
+            }
+        },
+        {
+            label: "Astérix",
+            command: () => {
+                navigate('/asterix')
+            }
+        },
+        {
+            label: "Alpha-Corp",
+            command: () => {
+                navigate('/alpha-corp')
+            }
+        },
+        {
+            label: "Recrutement",
+            command: () => {
+                navigate('/recrutement')
+            }
+        }
+    ]
+    const start = <img height="50px" src="./img/Logo.png" />
     return (
         <React.Fragment>
-            <nav>
-                <Link to="/famille">La Famille</Link>
-                <Link to="/armee">L'Armée'</Link>
-                <Link to="/asterix">Astérix</Link>
-                <Link to="/alpha-corp">Alpha-Corp</Link>
-                <Link to="/recrutement">Recrutement</Link>
-            </nav>
+            <Menubar
+                className="m-1 text-xl"
+                model={items}
+                start={start}
+            />
         </React.Fragment>
     )
 }
