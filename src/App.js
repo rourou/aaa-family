@@ -10,9 +10,9 @@ import Clan from './components/clan';
 import Familly from './components/familly';
 
 function App() {
-  console.log(window.location.pathname)
-  const navigate = useNavigate();
-  navigate(window.location.pathname)
+  //console.log(window.location.pathname)
+  //const navigate = useNavigate();
+  //navigate(window.location.pathname)
 
   return (
     <div className="App">
