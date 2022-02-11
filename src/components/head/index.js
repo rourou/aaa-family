@@ -3,7 +3,6 @@ import Logo from './logo.js'
 import Menu from './menu.js'
 
 const Head = (props) => {
-    console.log('props:', props)
 
     return (
         <React.Fragment>

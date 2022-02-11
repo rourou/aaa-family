@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Footer from './components/footer/footer';
 
 import clanInfos from './infos/infosClans.json'
@@ -10,9 +10,6 @@ import Clan from './components/clan';
 import Familly from './components/familly';
 
 function App() {
-  //console.log(window.location.pathname)
-  //const navigate = useNavigate();
-  //navigate(window.location.pathname)
 
   return (
     <div className="App">
