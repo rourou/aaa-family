@@ -13,7 +13,7 @@ const Recrue = (props) => {
             <div>
                 <img className="m-2 border-round"
                     alt="IMG recrutement"
-                    height="450px" src="./img/RecrutementAAA.jpg"
+                    Width="320px" src="./img/RecrutementAAA.jpg"
                 />
             </div>
             <Card
