@@ -11,13 +11,13 @@ const Recrue = (props) => {
     return (
         <div className="lg:flex m-5 align-content-center md:block align-content-center align-items-stretch text-center justify-content-center">
             <div>
-                <img className="m-2 border-round"
+                <img className="sm:m-1 lg:m-2 border-round"
                     alt="IMG recrutement"
                     height="450px" src="./img/RecrutementAAA.jpg"
                 />
             </div>
             <Card
-                className="m-2 p-2 align-items-center text-justify"
+                className="sm:m-1 lg:m-2 p-2 align-items-center text-justify"
             >
                 <h1 className="text-center">
                     BONJOUR A TOUS AMIS CLASHEURS ET CLASHEUSES
