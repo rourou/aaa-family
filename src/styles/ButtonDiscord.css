@@ -8,10 +8,14 @@
 }
 .p-button.discord:hover {
     background-position: left bottom;
+    background-color: #282C34;
+    color:#fff
 }
 .p-button.discord i {
     background-color: var(--bluegray-800);
 }
 .p-button.discord:focus {
     box-shadow: 0 0 0 1px var(--bluegray-500);
+    background-color: #282C34;
+    color:#fff
 }

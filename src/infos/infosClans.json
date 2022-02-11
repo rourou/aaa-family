@@ -2,16 +2,22 @@
     "armee": {
         "name": "L'Armée",
         "tag": "#2JQ82LG",
-        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=2JQ82LG"
+        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=2JQ82LG",
+        "logo": "./img/armee-ecusson.png",
+        "description": "Bienvenue dans le clan N.1 de L'Armée D'Asterix. Joueurs adultes et expérimentés. LDC à 30 ● GDC avec stratégie. GUERRIER ou FARMEUR ici vous trouverez votre bonheur !🙂Nombreux évents organisés GDC50/FW etc.."
     },
     "asterix": {
         "name": "Astérix Team",
         "tag": "#YV902CU",
-        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=YV902CU"
+        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=YV902CU",
+        "logo": "./img/asterix-ecusson.png",
+        "description": "Bienvenue dans le clan N.2 de L'armée D'Asterix. Joueurs mâture et expérimenté avec une âme d'enfant 🙂// Nombreux événements organisés :GDC50 - FW etc. Guerrier ou Farmeur ici vous trouverez votre bonheur !🙂"
     },
     "alphacorp": {
         "name": "Alpha Corps",
         "tag": "#2LYU98Q2",
-        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=2LYU98Q2"
+        "link": "https://link.clashofclans.com/fr?action=OpenClanProfile&tag=2LYU98Q2",
+        "logo": "./img/alpha-corps-ecusson.png",
+        "description": "Hello bienvenue dans le clan N.3 de L'armée D asterix ! 😄 Clan en instance de relancement. Nombreux évents organisés chaque mois. Famille très dynamique."
     }
 }

@@ -24,7 +24,7 @@ function App() {
         />
 
         <Route
-          path='/recrutement'
+          path='/rejoins-nous'
           element={<Recrue />}
         />
 

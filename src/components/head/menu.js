@@ -25,26 +25,26 @@ const Menu = (props) => {
             }
         },
         {
-            label: "Alpha-Corp",
+            label: "Alpha Corps",
             command: () => {
                 navigate('/alpha-corps')
             }
         },
         {
-            label: "Recrutement",
+            label: "Rejoins nous",
             command: () => {
-                navigate('/recrutement')
+                navigate('/rejoins-nous')
             }
         }
     ]
     const start = <img
         alt="logo"
-        height="50px"
+        height="25px"
         src="./img/Logo.png" />
     return (
         <React.Fragment>
             <Menubar
-                className="m-1 text-xl"
+                className="m-1 p-2"
                 model={items}
                 start={start}
             />
