@@ -1,0 +1,14 @@
+{
+    "armee": {
+        "name": "L'Armée",
+        "tag": "#12"
+    },
+    "asterix": {
+        "name": "Astérix",
+        "tag": "#123"
+    },
+    "alphacorp": {
+        "name": "Alpha Corp",
+        "tag": "#1234"
+    }
+}
