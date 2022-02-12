@@ -9,15 +9,19 @@ const Recrue = (props) => {
 
 
     return (
-        <div className="lg:flex sm:m-1 lg:m-5 align-content-center md:block align-content-center align-items-stretch text-center justify-content-center">
-            <div>
+        <div className="md:block lg:flex md:m-1 lg:m-5 align-content-center align-content-center align-items-stretch text-center justify-content-center">
+            <div className="p-0 m-0">
+                <img className="m-2 border-round hidden lg:block"
+                    alt="IMG recrutement"
+                    width="500px"
+                    src="./img/RecrutementAAA.jpg"
+                />
+            </div>
+            <div className="p-0 m-0 lg:hidden">
                 <img className="m-2 border-round"
                     alt="IMG recrutement"
-<<<<<<< HEAD
-                    width="80%" src="./img/RecrutementAAA.jpg"
-=======
-                    Width="320px" src="./img/RecrutementAAA.jpg"
->>>>>>> 738e11c75756f6606584d9b3414380d96f39edec
+                    width="70%"
+                    src="./img/RecrutementAAA.jpg"
                 />
             </div>
             <Card
@@ -33,31 +37,35 @@ const Recrue = (props) => {
                     Voici  L'ARMÉE D'ASTERIX
                 </h2>
                 <div className="flex flex-column ">
-                    <div>
-                        <i className="pi pi-chevron-right" style={{ 'fontSize': '1.5em', "color": "#FFDA70", "fontWeight": "bold" }} /> <strong>3 clans</strong>
+                    <div className="flex justify-content-start ml-4">
+                        <i className="pi pi-check mr-2" style={{ 'fontSize': '1.5em', "color": "#FFDA70", "fontWeight": "bold" }} /> <strong>3 clans</strong>
                     </div>
-                    <div>
-                        <i className="pi pi-chevron-right" style={{ 'fontSize': '1.5em', "color": "#FFDA70", "fontWeight": "bold" }} /> <strong>3 univers différents</strong>
+                    <div className="flex justify-content-start ml-6 mt-2 mb-2">
+                        <i className="pi pi-check mr-2" style={{ 'fontSize': '1.5em', "color": "#FFDA70", "fontWeight": "bold" }} /> <strong>3 univers différents</strong>
                     </div>
-                    <div>
-                        <i className="pi pi-chevron-right" style={{ 'fontSize': '1.5em', "color": "#FFDA70", "fontWeight": "bold" }} /> <strong>une seule famille, un seul groupe</strong>
+                    <div className="flex justify-content-start ml-8">
+                        <i className="pi pi-check mr-2" style={{ 'fontSize': '1.5em', "color": "#FFDA70", "fontWeight": "bold" }} /> <strong>une seule famille, un seul groupe</strong>
                     </div>
                 </div>
 
                 <p className="text-center">
                     Guerrier ou farmeur, soyez en sur vous trouverez votre bonheur !
                 </p>
+
                 <p>
+                    <i className="pi pi-arrow-right mr-2" />
                     <strong>Clan 1 : Armée</strong><br />
                     Clan chill + accès stratégie<br />
                     Recrutement à partir de HDV 12
                 </p>
                 <p>
+                    <i className="pi pi-arrow-right mr-2" />
                     <strong>Clan 2 : Asterix</strong><br />
                     Clan orienté très chil, ambiance déjantée<br />
                     Recrutement à partir de HDV 11
                 </p>
                 <p>
+                    <i className="pi pi-arrow-right mr-2" />
                     <strong>Clan 3 : Alpha</strong><br />
                     Clan orienté vers la stratégie et le rush<br />
                     Recrutement à partir de HDV 11

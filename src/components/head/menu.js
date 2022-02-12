@@ -47,7 +47,7 @@ const Menu = (props) => {
     return (
         <React.Fragment>
             <Menubar
-                className="m-1 p-2 lg:flex xl:flex sm:hidden md:hidden"
+                className="m-1 p-2 hidden lg:flex"
                 model={items}
                 start={start}
             />
