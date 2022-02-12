@@ -9,11 +9,15 @@ const Recrue = (props) => {
 
 
     return (
-        <div className="lg:flex m-5 align-content-center md:block align-content-center align-items-stretch text-center justify-content-center">
+        <div className="lg:flex sm:m-1 lg:m-5 align-content-center md:block align-content-center align-items-stretch text-center justify-content-center">
             <div>
                 <img className="m-2 border-round"
                     alt="IMG recrutement"
+<<<<<<< HEAD
                     width="80%" src="./img/RecrutementAAA.jpg"
+=======
+                    Width="320px" src="./img/RecrutementAAA.jpg"
+>>>>>>> 738e11c75756f6606584d9b3414380d96f39edec
                 />
             </div>
             <Card
