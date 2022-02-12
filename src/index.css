@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "DAGGERSQUARE";
+  src: url("../public/fonts/DAGGERSQUARE.otf") format("otf")
+ }
+
 body {
   margin: 0;
-  font-family: 'poppins' 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'DAGGERSQUARE' ,'poppins', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,5 +15,11 @@ body {
   background-color: #282c34;
 
   /*Text*/
-  color: rgb(255, 255, 255);
+  color: #FFDA70;
+}
+
+h1, h2, h3, h4, p{
+  font-family: 'DAGGERSQUARE' ,'poppins', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }

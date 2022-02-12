@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Footer from './components/footer/footer';
 
-import clanInfos from './infos/infosClans.json'
+import clansInfos from './infos/infosClans.json'
 
 import Head from './components/head'
 import Recrue from './components/recrue';
@@ -20,7 +20,7 @@ function App() {
 
         <Route
           path='/'
-          element={<Familly />}
+          element={<Familly clans={clansInfos} />}
         />
 
         <Route
@@ -30,17 +30,17 @@ function App() {
 
         <Route
           path='/armee'
-          element={<Clan clan={clanInfos.armee} />}
+          element={<Clan clan={clansInfos.armee} />}
         />
 
         <Route
           path='/asterix'
-          element={<Clan clan={clanInfos.asterix} />}
+          element={<Clan clan={clansInfos.asterix} />}
         />
 
         <Route
           path='/alpha-corps'
-          element={<Clan clan={clanInfos.alphacorp} />}
+          element={<Clan clan={clansInfos.alphacorp} />}
         />
 
       </Routes>

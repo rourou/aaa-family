@@ -1,48 +1,74 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import { Carousel } from 'primereact/carousel';
+import { Card } from "primereact/card";
 
 const Familly = (props) => {
     const navigate = useNavigate()
 
+    const responsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 3,
+            numScroll: 3
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 2,
+            numScroll: 1
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1,
+            numScroll: 1
+        }
+    ];
+    const clanTemplate = (clan) => {
+        return (
+            <Card className="m-2">
+                <div
+                    onClick={() => navigate(`/${clan.nameLink}`)}
+                    className="m-0">
+                    <img
+                        alt={`ecusson clan ${clan.nameLink}`}
+                        width="150px"
+                        src={`./img/${clan.nameLink}-ecusson.webp`}
+                        className="p-0"
+                    />
+                    <h2>{clan.name}</h2>
+                </div>
+            </Card >
+        )
+    }
+    let clans = []
+    for (let clan in props.clans) {
+        clans.push(props.clans[clan])
+    }
+
+    console.log('clans:', clans)
+
     return (
-        <div className="block text-center">
+        <div className="block text-center justify-content-center">
 
             <img
                 alt="logo"
-                height="150px"
+                height="100px"
                 className="mt-3 mb-0"
                 src="./img/logo.png"
             />
-            <h1 className=" mt-0 text-7xl">
-                Une Famille
-            </h1>
+            <Carousel
+                style={{ maxWidth: '800px', margin: 'auto' }}
+                value={clans}
+                itemTemplate={clanTemplate}
+                numVisible={3} numScroll={1}
+                responsiveOptions={responsiveOptions}
+                header={
+                    <h1 className=" m-0 p-0 text-6xl">
+                        Une Famille
+                    </h1>
+                }
+            />
 
-            <div className="flex justify-content-center">
-                <div
-                    onClick={() => navigate('/armee')}
-                    className="m-2">
-                    <img
-                        alt="ecusson clan armee"
-                        width="150px" src="./img/armee-ecusson.png" />
-                    <h2>L'armée</h2>
-                </div>
-                <div
-                    onClick={() => navigate('/asterix')}
-                    className="m-2">
-                    <img
-                        alt="ecusson clan asterix"
-                        width="150px" src="./img/asterix-ecusson.png" />
-                    <h2>Astérix Team</h2>
-                </div>
-                <div
-                    onClick={() => navigate('/alpha-corps')}
-                    className="m-2">
-                    <img
-                        alt="ecusson clan alpha-corps"
-                        width="150px" src="./img/alpha-corps-ecusson.png" />
-                    <h2>Alpha Corps</h2>
-                </div>
-            </div>
         </div>
     )
 }

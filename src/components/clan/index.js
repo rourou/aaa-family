@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Tag } from 'primereact/tag';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 
@@ -11,7 +12,7 @@ const Clan = (props) => {
     return (
         <div className="block text-center">
 
-            <div className="mt-3 flex align-content-center justify-content-center">
+            <div className="mt-3 lg:flex align-content-end justify-content-center align-items-end sm:block">
 
                 <img
                     height="100px"
@@ -19,17 +20,16 @@ const Clan = (props) => {
                     src={props.clan.logo}
                 />
 
-                <div className=" block">
-                    <h1 className="mt-0 mb-0 text-7xl">
-                        {props.clan.name}
-                    </h1>
-                    <h2 className="mt-0">
-                        {props.clan.tag}
-                    </h2>
-                </div>
+                <h1 className="mt-0 mb-0 text-7xl">
+                    {props.clan.name}
+                </h1>
+                <Tag
+                    className="m-2 pi pi-hashtag text-xl"
+                    value={props.clan.tag}
+                />
 
             </div>
-            <Card className="m-5 p-2">
+            <Card className="mr-5 ml-5 mt-3 p-2">
                 {props.clan.description}
                 <div>
                     <Button
