@@ -7,7 +7,6 @@ import { GetAaaFamilly } from './callsApi/aaa-family'
 
 import Head from './components/head'
 import Recrue from './components/recrue';
-import Clan from './components/clan';
 import Familly from './components/familly';
 
 function App() {
