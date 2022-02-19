@@ -17,7 +17,7 @@ function App() {
 
   React.useEffect(() => {
     recupAAA()
-  }, [])
+  }, [recupAAA])
 
   //recuperation du JSON en cahe et demande MAJ si trop vieille
   const recupAAA = async () => {
@@ -32,6 +32,7 @@ function App() {
     //verif si mise a jour trop vieille
     //recuperation de la différence de jour pour le nombre d'ajout
     const diff_temps = moment(new Date(), "DD-MM-YYYY") - moment(new Date(recup.Maj), "DD-MM-YYYY")
+    console.log('moment(new Date(recup.Maj), "DD-MM-YYYY"):', moment(new Date(recup.Maj), "DD-MM-YYYY"))
     const diff_jours = diff_temps / (1000 * 3600 * 24)
     const diff_hours = Math.round(diff_jours * 24)
     console.log(' diff_hours:', diff_hours)
