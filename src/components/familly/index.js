@@ -1,6 +1,5 @@
 import { TabView, TabPanel } from 'primereact/tabview';
 import React from "react";
-import { Carousel } from 'primereact/carousel';
 import { Card } from "primereact/card";
 import { Tag } from 'primereact/tag';
 import { Accordion, AccordionTab } from 'primereact/accordion';
@@ -9,7 +8,7 @@ import { Avatar } from 'primereact/avatar';
 const Familly = (props) => {
 
     const [clanSelect, setClanSelect] = React.useState(null)
-    const [clans, setClans] = React.useState([])
+    const [clans] = React.useState([])
     const [activeIndex, setActiveIndex] = React.useState(0);
 
     const tradRole = {
@@ -26,7 +25,7 @@ const Familly = (props) => {
             }
         }
         setClanSelect(clans[0])
-    }, [props.clans])
+    }, [props.clans, clans])
 
     const viewClan = () => {
         return (
