@@ -23,3 +23,19 @@ h1, h2, h3, h4, p{
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
+h4{
+  color: #050503;
+}
+
+div.p-card-content{
+  padding: 0px !important;
+}
+div.p-card-body{
+  padding: 5px !important;
+}
+@media screen and (max-width: 500px){
+  ul.p-tabview-nav{
+  display: block;
+}
+}
+

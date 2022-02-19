@@ -10,30 +10,6 @@ const Menu = (props) => {
     const menu = React.useRef(null);
     const items = [
         {
-            label: "La Famille",
-            command: () => {
-                navigate('/')
-            }
-        },
-        {
-            label: "L'Armée",
-            command: () => {
-                navigate('/armee')
-            }
-        },
-        {
-            label: "Astérix",
-            command: () => {
-                navigate('/asterix')
-            }
-        },
-        {
-            label: "Alpha Corps",
-            command: () => {
-                navigate('/alpha-corps')
-            }
-        },
-        {
             label: "Rejoins nous",
             command: () => {
                 navigate('/rejoins-nous')
@@ -43,7 +19,9 @@ const Menu = (props) => {
     const start = <img
         alt="logo"
         height="25px"
-        src="./img/Logo.png" />
+        src="./img/Logo.png"
+        onClick={() => navigate('/')}
+    />
     return (
         <React.Fragment>
             <Menubar
@@ -56,8 +34,6 @@ const Menu = (props) => {
                 <SlideMenu className="m-2" ref={menu} model={items} popup viewportHeight={230} menuWidth={175}></SlideMenu>
                 <Button className="ml-2" type="button" icon="pi pi-bars" label="Menu" onClick={(event) => menu.current.toggle(event)}></Button>
             </div>
-
-
         </React.Fragment>
     )
 }
