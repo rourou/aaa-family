@@ -4,12 +4,17 @@ import { Card } from "primereact/card";
 import { Tag } from 'primereact/tag';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { Avatar } from 'primereact/avatar';
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 const Familly = (props) => {
 
     const [clanSelect, setClanSelect] = React.useState(null)
     const [clans] = React.useState([])
     const [activeIndex, setActiveIndex] = React.useState(0);
+
+    //React.useEffect(() => {
+    //    setClans([])
+    //}, [props])
 
     const tradRole = {
         coLeader: "Chef Adjoint",
@@ -19,12 +24,16 @@ const Familly = (props) => {
     }
 
     React.useEffect(() => {
-        for (let clan in props.clans) {
-            if (clan !== "Maj") {
-                clans.push(props.clans[clan])
+        if (clans.length > 0) {
+            clans = []
+        } else {
+            for (let clan in props.clans) {
+                if (clan !== "Maj") {
+                    clans.push(props.clans[clan])
+                }
             }
+            setClanSelect(clans[0])
         }
-        setClanSelect(clans[0])
     }, [props.clans, clans])
 
     const viewClan = () => {
@@ -106,39 +115,48 @@ const Familly = (props) => {
 
     return (
         <React.Fragment>
-            {
-                clans.length > 0 &&
-                <div className="block text-center justify-content-center">
-                    <img
-                        alt="logo"
-                        height="100px"
-                        className="mt-3 mb-0"
-                        src="./img/logo.png"
-                    />
-                    <h1 className=" m-0 p-0 text-6xl">
-                        Une Famille
-                    </h1>
-                    <TabView activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
-                        {
-                            clans.map((clan, i) =>
-                                <TabPanel
-                                    key={clan.name}
-                                    header={`${clan.name}`}
-                                    headerTemplate={
-                                        <div className="flex align-items-center px-3" style={{ cursor: 'pointer' }} onClick={() => setClanSelect(clan)}>
-                                            <Avatar image={clan.badgeUrls.medium} onImageError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} shape="circle" className="mx-2" />
-                                            <h4>{clan.name}</h4>
-                                        </div>
-                                    }
-                                >
-                                    {viewClan(clan)}
-                                </TabPanel>
-                            )
-                        }
-                    </TabView >
-                </div >
+            <div className="block text-center justify-content-center">
+                <img
+                    alt="logo"
+                    height="100px"
+                    className="mt-3 mb-0"
+                    src="./img/logo.png"
+                />
 
-            }
+                {
+                    clans.length > 0 ?
+                        <div>
+                            <h1 className=" m-0 p-0 text-4xl">
+                                Une Famille
+                            </h1>
+                            <TabView activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
+                                {
+                                    clans.map((clan, i) =>
+                                        <TabPanel
+                                            key={clan.name}
+                                            header={`${clan.name}`}
+                                            headerTemplate={
+                                                <div className="flex align-items-center px-3" style={{ cursor: 'pointer' }} onClick={() => setClanSelect(clan)}>
+                                                    <Avatar image={clan.badgeUrls.medium} onImageError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} shape="circle" className="mx-2" />
+                                                    <h4>{clan.name}</h4>
+                                                </div>
+                                            }
+                                        >
+                                            {viewClan(clan)}
+                                        </TabPanel>
+                                    )
+                                }
+                            </TabView >
+                        </div>
+                        :
+                        <div>
+                            <h1 className=" m-0 p-0 text-4xl">
+                                Recuperation de la famille en cours
+                            </h1>
+                            <ProgressSpinner style={{ width: '50px', height: '50px' }} strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s" />
+                        </div>
+                }
+            </div >
         </React.Fragment >
     )
 }
