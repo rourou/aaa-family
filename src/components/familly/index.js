@@ -9,7 +9,7 @@ import { ProgressSpinner } from 'primereact/progressspinner';
 const Familly = (props) => {
 
     const [clanSelect, setClanSelect] = React.useState(null)
-    const [clans] = React.useState([])
+    const [clans, setClans] = React.useState([])
     const [activeIndex, setActiveIndex] = React.useState(0);
 
     //React.useEffect(() => {
@@ -25,7 +25,7 @@ const Familly = (props) => {
 
     React.useEffect(() => {
         if (clans.length > 0) {
-            clans = []
+            setClans([])
         } else {
             for (let clan in props.clans) {
                 if (clan !== "Maj") {
@@ -124,7 +124,7 @@ const Familly = (props) => {
                 />
 
                 {
-                    clans.length > 0 ?
+                    !!clans ?
                         <div>
                             <h1 className=" m-0 p-0 text-4xl">
                                 Une Famille
