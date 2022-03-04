@@ -23,7 +23,7 @@ function App() {
 
   //recuperation du JSON en cahe et demande MAJ si trop vieille
   const recupAAA = async () => {
-    console.log('recupAAA')
+    console.log('recupAAA sans MAJ')
     let familyTag =
     {
       "armee": "2JQ82LG",
@@ -42,6 +42,7 @@ function App() {
     setState({ ...state, clansInfos: recup, diff: diff_hours })
     //puis avec si besoin
     if (diff_hours >= 2) {
+      console.log('recupAAA avec MAJ')
       const recup2 = await GetAaaFamilly({
         ...familyTag,
         maj: 'true'
