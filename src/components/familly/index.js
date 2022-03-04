@@ -124,7 +124,7 @@ const Familly = (props) => {
                 />
 
                 {
-                    !!clans ?
+                    clans.length > 0 ?
                         <div>
                             <h1 className=" m-0 p-0 text-4xl">
                                 Une Famille
