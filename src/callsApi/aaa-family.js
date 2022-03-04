@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = "http://82.66.147.26:8800"
+const url = "https://api-rato.duckdns.org"
 
 export const GetAaaFamilly = async (family) => {
     try {

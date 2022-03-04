@@ -45,7 +45,7 @@ function App() {
       }
     }
     recupAAA()
-  }, [state])
+  }, [])
 
   return (
     <div className="App">
